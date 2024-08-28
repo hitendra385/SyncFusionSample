@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{6F51B24B-E139-4433-BDBF-6C235A34082C}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SfMAUI PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1B753778-E0E3-45A7-867A-79984FA37480" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1B753778-E0E3-45A7-867A-79984FA37480" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HardwareInfo.cs">
+    <Files>
+      <File FileName="MainPage.xaml" Line="5" Column="14" />
+      <File FileName="CalendarDayCell.xaml" Line="50" Column="27" />
+      <File FileName="CalendarDayCell.xaml.cs" Line="69" Column="33" />
+      <File FileName="AppoinmentDragEvent.cs" Line="10" Column="10" />
+      <File FileName="MainPage.xaml.cs" Line="73" Column="2" />
+      <File FileName="SchedulerDataBindingViewModel.cs" Line="42" Column="9" />
+      <File FileName="Meeting.cs" Line="1" Column="1" />
+      <File FileName="SchedulerHelper.cs" Line="18" Column="33" />
+      <File FileName="SecondPage.xaml" Line="7" Column="63" />
+      <File FileName="MauiProgram.cs" Line="1" Column="1" />
+      <File FileName="App.xaml.cs" Line="9" Column="42" />
+      <File FileName="SecondPage.xaml.cs" Line="14" Column="6" />
+      <File FileName="HardwareInfo.cs" Line="116" Column="7" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SfMAUI" expanded="True">
+            <Node name="SfMAUI" expanded="True" selected="True">
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="SecondPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

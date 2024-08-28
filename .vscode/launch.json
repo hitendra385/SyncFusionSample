@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Meteor Debugger",
+            "type": "dotnet-meteor.debugger",
+            "request": "launch",
+            "preLaunchTask": "dotnet-meteor: Build"
+        },
+        {
+            "name": ".NET Meteor dotnet trace",
+            "type": "dotnet-meteor.debugger",
+            "request": "launch",
+            "profilerMode": "trace",
+            "preLaunchTask": "dotnet-meteor: Build"
+        },
+        {
+            "name": ".NET Meteor Release dotnet trace",
+            "type": "dotnet-meteor.debugger",
+            "request": "launch",
+            "profilerMode": "trace",
+            "configuration": "Release",
+            "preLaunchTask": "dotnet-meteor: Build"
+        },
+        {
+            "name": ".NET Meteor Debug Profiling",
+            "type": "dotnet-meteor.debugger",
+            "request": "launch",
+            "profilerMode": "gcdump",
+            "preLaunchTask": "dotnet-meteor: Build"
+        },
+        {
+            "name": ".NET Meteor Release Profiling",
+            "type": "dotnet-meteor.debugger",
+            "request": "launch",
+            "profilerMode": "gcdump",
+            "configuration": "Release",
+            "preLaunchTask": "dotnet-meteor: Build"
+        },
+        {
+            "name": ".NET MAUI",
+            "type": "maui",
+            "request": "launch",
+            "preLaunchTask": "maui: Build"
+        }
+    ]
+}

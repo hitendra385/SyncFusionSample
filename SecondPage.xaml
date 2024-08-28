@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SfMAUI.SecondPage"
+             Title="Home">
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Spacing="20">
+      <Button  WidthRequest="150"
+               Text="Open Calendar"
+               Clicked="Button_Clicked"/>
+
+        <Button Text="Collect Garbage"
+                    Clicked="CollectGarbage"/>
+            
+            <!-- Label should be removed before PR is completed -->
+            <Label VerticalOptions="Center"
+                   FontSize="18"
+                   FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="HeapSpan"/>
+                        <Span Text=" | "/>
+                        <Span x:Name="RamSpan"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+    </VerticalStackLayout>
+</ContentPage>
