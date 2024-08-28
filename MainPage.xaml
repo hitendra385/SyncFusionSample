@@ -1,61 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SampleBrowser.Maui.Scheduler.SfScheduler"
-             xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             xmlns:cell="clr-namespace:SfMAUI"
-             Title="Calendar"
-             x:Class="SfMAUI.MainPage">
+             x:Class="SfMAUI.MainPage"
+             Title="Home">
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Spacing="20">
+      <Button  WidthRequest="150"
+               Text="Open Calendar"
+               Clicked="Button_Clicked"/>
 
-    <Grid Padding="10">
-            <Grid.BindingContext>
-                <local:SchedulerDataBindingViewModel/>
-            </Grid.BindingContext>
-           <Border 
-                   HorizontalOptions="Fill"
-                    StrokeThickness="1"
-                    Stroke="LightGray">
-                   <schedule:SfScheduler x:Name="calendarView"
-                                      AppointmentsSource="{Binding SchedulerDragEvents,Mode=TwoWay}"
-                                      ShowBusyIndicator="True"
-                                      View="Month"
-                                      InputTransparent="False"
-                                      SelectedDate="{Binding SelectedDate, Mode=TwoWay}"
-                                      AllowAppointmentDrag="False"
-                                      SelectedAppointmentBackground="Transparent"
-                                      ShowNavigationArrows="False"
-                                      AllowedViews="Month">
-
-                    <schedule:SfScheduler.HeaderView>
-                        <schedule:SchedulerHeaderView Height="0"/>
-                    </schedule:SfScheduler.HeaderView>
-
-                    <schedule:SfScheduler.CellSelectionView>
-                        <schedule:SchedulerCellSelectionView Background="LightBlue"
-                                                             Stroke="Transparent"/>
-                    </schedule:SfScheduler.CellSelectionView>
-
-                    <schedule:SfScheduler.MonthView>
-                        <schedule:SchedulerMonthView AppointmentDisplayMode="None"
-                                                     ShowLeadingAndTrailingDates="False">
-
-                            <schedule:SchedulerMonthView.ViewHeaderTemplate>
-                                <DataTemplate>
-                                    <Grid Background="Orange" >
-                                        <Label HorizontalOptions="Center"
-                                               VerticalOptions="Center"
-                                               TextTransform="Uppercase"
-                                               FontAttributes="Bold"
-                                               Text="{Binding StringFormat='{0:ddd}'}"
-                                               TextColor="White"/>
-                                    </Grid>
-                                </DataTemplate>
-                            </schedule:SchedulerMonthView.ViewHeaderTemplate>
-
-                        </schedule:SchedulerMonthView>
-                    </schedule:SfScheduler.MonthView>
-                </schedule:SfScheduler>
-            </Border>
-        </Grid>
+        <Button Text="Collect Garbage"
+                    Clicked="CollectGarbage"/>
+            
+            <!-- Label should be removed before PR is completed -->
+            <Label VerticalOptions="Center"
+                   FontSize="18"
+                   FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="HeapSpan"/>
+                        <Span Text=" | "/>
+                        <Span x:Name="RamSpan"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+    </VerticalStackLayout>
 </ContentPage>
-
