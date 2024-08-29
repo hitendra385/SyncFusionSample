@@ -25,8 +25,6 @@ public class HardwareInfo
             long bytes;
 
             // GetCurrentProcess() is not supported in net8.0 ios or android
-            // https://github.com/dotnet/runtime/issues/94903
-            // https://dev.azure.com/MatrixCareHHP/HH/_workitems/edit/211855
             // As such we have had to implement an iOS-only means of getting
             // the current memory usage. The below should be reverted when this
             // is resolved (seems to be with .NET 9). We should also remove
@@ -56,14 +54,11 @@ public class HardwareInfo
 
 
 // GetCurrentProcess() is not supported in net8.0 ios or android
-// https://github.com/dotnet/runtime/issues/94903
-// https://dev.azure.com/MatrixCareHHP/HH/_workitems/edit/211855
 // As such we have had to implement this iOS-only class to get
 // the current memory usage. The below should be removed when this
 // is resolved (seems to be with .NET 9). We should also remove
 // the .net8-ios target from TargetFrameworks in csproj. 
 
-// This logic is based on https://github.com/roubachof/Xamarin.Forms.Nuke/blob/master/Benchmark/Sample.iOS/PlatformPerformance.cs
 public static class MemoryManager
 {
     const int KERN_SUCCESS = 0;
